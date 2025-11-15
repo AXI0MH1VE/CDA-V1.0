@@ -1,0 +1,26 @@
+.history-panel {
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .history-panel h2 {
+    margin-top: 0;
+  }
+  
+  .history-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .history-list li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .history-list li:hover {
+    background-color: #ddd;
+  }
+  
