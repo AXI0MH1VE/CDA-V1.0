@@ -70,6 +70,12 @@ impl MerkleTree {
         }
     }
 
+    /// Get current state hash for constitutional auditability
+    pub fn get_state_hash(&self) -> Result<String, Box<dyn std::error::Error>> {
+        self.get_root_hash()
+            .ok_or_else(|| "No constitutional state available".into())
+    }
+
     /// Rebuild the tree after adding leaves
     fn rebuild_root(&mut self) {
         let leaves: Vec<_> = self.leaves.values().collect();
