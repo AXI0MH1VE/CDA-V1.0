@@ -28,3 +28,8 @@ z3 = "0.19.2"
 hex = "0.4"
 thiserror = "1"
 regex = "1.10"
+anyhow = "1.0"
+candle-core = "0.5.1"
+candle-nn = "0.5.1"
+candle-transformers = { version = "0.5.1", features = ["mistral"] }
+dotenvy = "0.15"

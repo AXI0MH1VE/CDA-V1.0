@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import MessageList from './MessageList';
 import InputBar from './InputBar';
+import ConversationHistory from './ConversationHistory';
 import './ChatInterface.css';
 
 interface Message {
@@ -14,6 +15,7 @@ interface Message {
 const ChatInterface: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isHistoryVisible, setIsHistoryVisible] = useState(true);
 
   useEffect(() => {
     // Add constitutional disclosure on first load
@@ -68,18 +70,27 @@ const ChatInterface: React.FC = () => {
 
   return (
     <div className="chat-interface">
-      <div className="chat-header">
-        <h1>AxiomHive Assistant</h1>
-        <p>Constitutionally compliant AI assistant</p>
-      </div>
-
-      <MessageList messages={messages} />
-
-      <InputBar
-        onSendMessage={handleSendMessage}
-        disabled={isLoading}
-        placeholder={isLoading ? "Processing..." : "Type your message..."}
+      <ConversationHistory
+        conversations={[]}
+        onSelectConversation={() => {}}
+        className={isHistoryVisible ? '' : 'collapsed'}
       />
+      <div className="chat-main">
+        <div className="chat-header">
+          <button className="history-toggle-btn" onClick={() => setIsHistoryVisible(!isHistoryVisible)}>
+            {isHistoryVisible ? '‹' : '›'}
+          </button>
+          <h1>AxiomHive Assistant</h1>
+        </div>
+
+        <MessageList messages={messages} />
+
+        <InputBar
+          onSendMessage={handleSendMessage}
+          disabled={isLoading}
+          placeholder={isLoading ? "Processing..." : "Type your message..."}
+        />
+      </div>
     </div>
   );
 };
