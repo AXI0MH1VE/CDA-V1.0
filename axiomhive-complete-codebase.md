@@ -1,4 +1,4 @@
-# AxiomHive Assistant - Complete Production Codebase
+﻿# AxiomHive Assistant - Complete Production Codebase
 
 **Version:** 1.0.0  
 **Architecture:** Ω Purity Engine (APE) - Dual Layer System  
@@ -72,7 +72,7 @@ npm install
 # 3. Download AI models (first time only)
 # Place models in models/ directory:
 # - mistral-7b-4bit.gguf (4GB)
-# - embeddings.gguf (100MB)
+# - embeddings.onnx (100MB)
 
 # 4. Run in development mode
 npm run tauri:dev
@@ -171,7 +171,7 @@ axiomhive-assistant/
 ├── models/
 │   ├── README.md
 │   ├── mistral-7b-4bit.gguf (download separately)
-│   └── embeddings.gguf (download separately)
+│   └── embeddings.onnx (download separately)
 │
 ├── docs/
 │   ├── CDA-v1.0.md
@@ -395,3 +395,4 @@ pub fn check_identity_prohibitions(&self, text: &str) -> Result<()>
 **Status:** ✓ Complete codebase ready for implementation  
 **Estimated Implementation Time:** 12-16 weeks  
 **Target Release:** Q2 2026
+

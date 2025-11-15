@@ -1,0 +1,33 @@
+# AxiomHive Community License 1.0
+
+Copyright (c) 2025 AxiomHive.
+
+All rights reserved.
+
+## Grant of Use
+
+You may copy, fork, and modify this repository for:
+
+- Personal use
+- Academic research
+- Internal evaluation and prototyping
+
+All usage must retain this license, attribution to AxiomHive, and the original copyright notice.
+
+## Commercial Use
+
+Commercial deployment, distribution, or integration into paid products or services requires a separate written license from AxiomHive. Contact licensing@axiomhive.co to obtain commercial rights.
+
+## Prohibited Uses
+
+- Removing or obscuring constitutional disclosures.
+- Misrepresenting the software as your original work.
+- Using the software to train models that violate CDA-v1.0 principles.
+
+## Disclaimer
+
+This software is provided “as is,” without warranty of any kind. AxiomHive is not liable for damages arising from its use.
+
+## Questions
+
+For licensing questions, reach out to licensing@axiomhive.co.
