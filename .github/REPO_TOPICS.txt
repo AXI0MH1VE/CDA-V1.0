@@ -1,0 +1,8 @@
+llm
+desktop-app
+tauri
+rust
+ai-assistant
+constitutional-ai
+deterministic-ai
+local-llm
