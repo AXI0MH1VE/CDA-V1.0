@@ -1,0 +1,1 @@
+Local deterministic AI desktop assistant implementing the CDA-v1.0 Constraint Decomposition Architecture (Lambda Core + Phi Layer).
