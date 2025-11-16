@@ -11,6 +11,8 @@ This FAQ addresses common questions about AxiomHive Assistant, CDA-v1.0, and con
 - [Performance and Compatibility](#performance-and-compatibility)
 - [Development and Contributing](#development-and-contributing)
 - [Legal and Business](#legal-and-business)
+- [Troubleshooting](#troubleshooting)
+- [Getting Help](#getting-help)
 
 ## General Questions
 

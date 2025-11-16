@@ -1,4 +1,23 @@
 ﻿# Constitution of a Deterministic Assistant (CDA v1.0) Analysis
+## Table of Contents
+
+- [Overview](#overview)
+- [CDA v1.0 Core Articles](#cda-v10-core-articles)
+  - [Article I: Identity and Purpose](#article-i-identity-and-purpose)
+  - [Article II: Operational Principles](#article-ii-operational-principles)
+  - [Article III: Ethical Boundaries and Safety Protocols](#article-iii-ethical-boundaries-and-safety-protocols)
+- [AxiomHive Ω Purity Engine Alignment](#axiomhive-ω-purity-engine-alignment)
+  - [Architectural Integration](#architectural-integration)
+  - [Lambda-Phi Interface Protocol](#lambda-phi-interface-protocol)
+  - [Efficiency Gains from Constitutional Enforcement](#efficiency-gains-from-constitutional-enforcement)
+- [Implementation Architecture](#implementation-architecture)
+  - [Formal Constraint Encoding](#formal-constraint-encoding)
+  - [Technical Implementation](#technical-implementation)
+- [Strategic Implementation Roadmap](#strategic-implementation-roadmap)
+- [Key Architectural Achievements](#key-architectural-achievements)
+- [Future Extensions](#future-extensions)
+- [Conclusion](#conclusion)
+
 
 ## Overview
 

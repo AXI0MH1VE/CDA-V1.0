@@ -9,7 +9,11 @@ This document provides technical details for developers working on the AxiomHive
 - [API Reference](#api-reference)
 - [Development Setup](#development-setup)
 - [Building and Testing](#building-and-testing)
+- [Key Design Patterns](#key-design-patterns)
+- [Performance Considerations](#performance-considerations)
+- [Security and Privacy](#security-and-privacy)
 - [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
 
 ## Architecture Overview
 

@@ -10,7 +10,9 @@ This guide provides detailed instructions for installing and setting up the Axio
 - [Model Setup](#model-setup)
 - [Configuration](#configuration)
 - [Verification](#verification)
+- [Platform-Specific Notes](#platform-specific-notes)
 - [Troubleshooting](#troubleshooting)
+- [Next Steps](#next-steps)
 
 ## System Requirements
 

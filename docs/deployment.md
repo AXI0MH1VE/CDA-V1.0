@@ -10,6 +10,11 @@ This guide covers building, packaging, and distributing the AxiomHive Assistant 
 - [Distribution Channels](#distribution-channels)
 - [Update Mechanism](#update-mechanism)
 - [CI/CD Pipeline](#cicd-pipeline)
+- [Security Considerations](#security-considerations)
+- [Monitoring and Analytics](#monitoring-and-analytics)
+- [Troubleshooting Deployment](#troubleshooting-deployment)
+- [Performance Optimization](#performance-optimization)
+- [Legal and Compliance](#legal-and-compliance)
 
 ## Build Process
 
@@ -596,4 +601,4 @@ npm run clean
 - **Mac App Store:** Comply with App Store Review Guidelines
 - **Linux stores:** Follow respective store policies
 
-For more information, see the [Legal Documentation](legal.md) or contact legal@axiomhive.co.
+For more information, contact legal@axiomhive.co.

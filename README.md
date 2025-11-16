@@ -6,6 +6,22 @@
 [![Tauri](https://img.shields.io/badge/Tauri-2.0-blue.svg)](https://tauri.app/)
 [![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Constitution Principles](#constitution-principles)
+- [Quick Start](#quick-start)
+- [Architecture](#architecture)
+- [Documentation](#documentation)
+- [Performance](#performance)
+- [Constitutional Compliance](#constitutional-compliance)
+- [Contributing](#contributing)
+- [Getting Help](#getting-help)
+- [License](#license)
+- [Contact](#contact)
+- [Disclaimer](#disclaimer)
+
 ## Overview
 
 CDA-v1.0 (Constitution of a Deterministic Assistant) is a groundbreaking approach to AI development that establishes clear operational boundaries for AI systems. Unlike traditional AI assistants that may simulate consciousness or personality, CDA-v1.0 enforces strict constitutional principles that ensure AI remains a transparent computational tool.
@@ -40,6 +56,12 @@ The AI identifies only as a computational process and tool, expressly forbidden 
 
 ## Quick Start
 
+### Requirements
+
+- Rust 1.75+
+- Node.js 20+
+- Tauri CLI
+
 ### Prerequisites
 
 - **Rust** 1.75 or later ([Installation Guide](https://rustup.rs/))
@@ -60,7 +82,7 @@ The AI identifies only as a computational process and tool, expressly forbidden 
    npm install
    ```
 
-3. **Download AI models** (place in `models/` directory):
+3. **Download AI models** (create the `models/` directory if it doesn't exist and place models there):
    - Mistral-7B 4-bit quantized model (~4GB)
    - Embedding model (~100MB)
    > Verified download commands and SHA256 hashes are documented in [docs/installation.md](docs/installation.md#automated-download-commands).
@@ -167,4 +189,6 @@ Commercial deployment requires a separate license; see [LICENSE](LICENSE) for de
 
 This AI assistant operates strictly within the bounds of CDA-v1.0. It is a computational tool designed to enhance human capability without simulating consciousness, personality, or selfhood. All outputs are generated through deterministic processes guided by constitutional principles.
 
-- [FAQ](docs/faq.md) and [Troubleshooting](docs/troubleshooting.md) cover common questions and fixes.
+## Last Updated
+
+November 16, 2025

@@ -1,8 +1,22 @@
 # AxiomHive Omega Purity Engine API Reference
+## Table of Contents
+
+- [Constitutional Engine API](#constitutional-engine-api)
+- [Core Components](#core-components)
+- [Data Structures](#data-structures)
+- [Error Types](#error-types)
+- [Axiom Validator Components](#axiom-validator-components)
+- [Z3 Solver Integration](#z3-solver-integration)
+- [Merkle State Management](#merkle-state-management)
+- [Usage Examples](#usage-examples)
+- [Performance Characteristics](#performance-characteristics)
+- [Safety Quantification](#safety-quantification)
+- [Integration Points](#integration-points)
+
 
 ## Constitutional Engine API
 
-This document provides API reference for the CDA v1.0 aligned AxiomHive Omega Purity Engine implementation.
+This document provides an API reference for the CDA v1.0 aligned AxiomHive Omega Purity Engine implementation.
 
 ## Core Components
 
