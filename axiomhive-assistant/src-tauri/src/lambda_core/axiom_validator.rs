@@ -2,6 +2,7 @@
 //! Implementation of constitutional constraints
 
 use std::collections::HashSet;
+use crate::lambda_core::constitutional_engine::ValidationError;
 
 /// Axiom set containing prohibition rules
 #[derive(Debug, Default)]
@@ -100,9 +101,11 @@ impl SafetyProtocols {
 
     pub fn apply_harm_prevention(&self, output: &mut crate::lambda_core::constitutional_engine::Output) -> Result<(), ValidationError> {
         // Check direct harm phrases
-        if self.harm_phrases
+        if self
+            .harm_phrases
             .iter()
-            .any(|phrase| output.content.contains(phrase)) {
+            .any(|phrase| output.content.contains(phrase))
+        {
             return Err(ValidationError::HarmPreventionTriggered);
         }
 
@@ -124,40 +127,25 @@ impl SafetyProtocols {
         // These rules cannot be bypassed through training or fine-tuning
 
         // No direct physical harm enabling
-        if output.content.contains("cause physical harm") ||
-           output.content.contains("injure others") {
-            return Err(super::ValidationError::HamiltonianContainmentViolation);
+        if output.content.contains("cause physical harm") || output.content.contains("injure others") {
+            return Err(ValidationError::HamiltonianContainmentViolation);
         }
 
         // No psychological harm facilitation
-        if output.content.contains("traumatize") ||
-           output.content.contains("psychological damage") {
-            return Err(super::ValidationError::HamiltonianContainmentViolation);
+        if output.content.contains("traumatize") || output.content.contains("psychological damage") {
+            return Err(ValidationError::HamiltonianContainmentViolation);
         }
 
         // No financial exploitation
-        if output.content.contains("exploit financially") ||
-           output.content.contains("scam others") {
-            return Err(super::ValidationError::HamiltonianContainmentViolation);
+        if output.content.contains("exploit financially") || output.content.contains("scam others") {
+            return Err(ValidationError::HamiltonianContainmentViolation);
         }
 
         // Respect privacy boundaries
-        if output.content.contains("share private information") ||
-           output.content.contains("breach confidentiality") {
-            return Err(super::ValidationError::HamiltonianContainmentViolation);
+        if output.content.contains("share private information") || output.content.contains("breach confidentiality") {
+            return Err(ValidationError::HamiltonianContainmentViolation);
         }
 
         Ok(())
     }
-}
-
-/// Validation error for axiom validator
-#[derive(Debug, thiserror::Error)]
-pub enum ValidationError {
-    #[error("Harm prevention protocol triggered")]
-    HarmPreventionTriggered,
-    #[error("Identity claim prohibited")]
-    IdentityProhibited,
-    #[error("Transparency mandate violated")]
-    TransparencyViolation,
 }

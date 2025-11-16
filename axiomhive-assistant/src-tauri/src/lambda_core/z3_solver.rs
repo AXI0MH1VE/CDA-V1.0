@@ -8,7 +8,7 @@ pub type ValidationResult = Result<(), ValidationError>;
 
 /// Z3 solver wrapper for constitutional validation
 pub struct Z3Solver {
-    context: Context,
+    context: &'static Context,
     solver: Solver<'static>,
     axioms: Vec<Bool<'static>>,
 }
@@ -17,9 +17,8 @@ impl Z3Solver {
     pub fn new() -> Self {
         let mut config = Config::new();
         config.set_model_generation(true);
-
-        let context = Context::new(&config);
-        let solver = Solver::new(&context);
+        let context = Box::leak(Box::new(Context::new(&config)));
+        let solver = Solver::new(context);
 
         Self {
             context,

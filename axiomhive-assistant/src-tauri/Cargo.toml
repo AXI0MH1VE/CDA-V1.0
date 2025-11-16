@@ -32,4 +32,5 @@ anyhow = "1.0"
 candle-core = "0.5.1"
 candle-nn = "0.5.1"
 candle-transformers = { version = "0.5.1", features = ["mistral"] }
+tokenizers = "0.15"
 dotenvy = "0.15"

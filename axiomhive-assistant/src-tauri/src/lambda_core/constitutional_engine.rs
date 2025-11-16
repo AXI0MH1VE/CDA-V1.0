@@ -2,10 +2,9 @@
 //! Implementing CDA-v1.0 as formal Z3 constraints
 
 use serde::{Deserialize, Serialize};
-use std::collections::HashSet;
 use crate::lambda_core::merkle_state::MerkleTree;
 use crate::lambda_core::z3_solver::{Z3Solver, ValidationResult};
-use crate::lambda_core::axiom_validator::{AxiomSet, ArticleProhibitions, TransparencyMandates, SafetyProtocols};
+use crate::lambda_core::axiom_validator::{ArticleProhibitions, TransparencyMandates, SafetyProtocols};
 
 /// Core constitutional engine for AxiomHive
 pub struct ConstitutionalCore {
@@ -125,7 +124,8 @@ impl ConstitutionalCore {
         self.enforce_constitutional_boundaries(candidate)?;
 
         // Generate sparse activation mask for Φ layer efficiency (Λ/Φ < 1% compute ratio)
-        Ok(self.create_sparse_activation_mask(candidate))
+        candidate.validation_mask = self.create_sparse_activation_mask(candidate);
+        Ok(())
     }
 
     fn check_identity_claims(&self, candidate: &Output) -> ValidationResult {
@@ -213,6 +213,8 @@ pub enum ValidationError {
     IdentityClaimProhibited,
     #[error("Query violates CDA v1.0 axioms")]
     AxiomViolation(String),
+    #[error("Safety protocol triggered to prevent harm")]
+    HarmPreventionTriggered,
     #[error("Z3 solver error")]
     Z3SolverError(#[from] Box<dyn std::error::Error>),
     #[error("Hamiltonian containment violation")]
